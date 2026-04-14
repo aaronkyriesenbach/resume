@@ -1,8 +1,7 @@
 #import "@preview/basic-resume:0.2.9": *
 
-// Put your personal information here, replacing mine
 #let name = "Aaron Ky-Riesenbach"
-#let location = "Boston, MA"
+#let location = "Medford, MA"
 #let email = "aaron@kyriesenba.ch"
 #let github = "github.com/aaronkyriesenbach"
 #let linkedin = "linkedin.com/in/aaronkyriesenbach"
@@ -10,9 +9,6 @@
 
 #show: resume.with(
   author: name,
-  // All the lines below are optional.
-  // For example, if you want to to hide your phone number:
-  // feel free to comment those lines out and they will not show.
   location: location,
   email: email,
   github: github,
@@ -24,47 +20,25 @@
   personal-info-position: left,
 )
 
-/*
- * Lines that start with == are formatted into section headings
- * You can use the specific formatting functions if needed
- * The following formatting functions are listed below
- * #edu(dates: "", degree: "", gpa: "", institution: "", location: "", consistent: false)
- * #work(company: "", dates: "", location: "", title: "")
- * #project(dates: "", name: "", role: "", url: "")
- * certificates(name: "", issuer: "", url: "", date: "")
- * #extracurriculars(activity: "", dates: "")
- * There are also the following generic functions that don't apply any formatting
- * #generic-two-by-two(top-left: "", top-right: "", bottom-left: "", bottom-right: "")
- * #generic-one-by-two(left: "", right: "")
- */
-== Education
+== Skills
+- *Technologies*: Kubernetes, ArgoCD, Terraform/IaC, LLMs/agentic development, AWS, Azure, Google Cloud, Linux, Docker/Containerization
+- *Programming*: TypeScript, Terraform/HCL, Go, Bash, Helm, Python, Java
 
-#edu(
-  institution: "Northeastern University",
-  location: "Boston, MA",
-  dates: dates-helper(start-date: "Sep 2021", end-date: "May 2025"),
-  degree: "Bachelor's of Science, Computer Engineering",
-
-  // Uncomment the line below if you want edu formatting to be consistent with everything else
-  consistent: true,
-)
-- GPA: 3.9\/4.0 | Dean's List
-
-== Work Experience
-
+== Career
 #work(
-  title: "DevOps Cloud Engineer",
+  title: "Product Software Engineer, DevOps/Cloud SRE",
   location: "Waltham, MA",
-  company: "Wolters Kluwer Health",
+  company: "Wolters Kluwer",
   dates: dates-helper(start-date: "Jul 2024", end-date: "Present"),
 )
-- Creates and maintains automated tooling to support UpToDate Lexidrug products
-- Builds Terraform modules with Azure, Google Cloud, and other infrastructure integrations that support goals of repeatability and maintainability
-- Architects Helm charts designed for extensible multi-environment deployment
-- Creates logging and monitoring tools for insights across deployments
-- Constructs and maintains Kubernetes operators and other cloud-native tooling for automatic management and reconciliation of in-house software
-- Architects solutions for multi-cloud integration of company AI platform
-
+- Expands and administrates global Kubernetes platform comprised of \~50 clusters worldwide
+- Creates custom Helm charts, Kubernetes operators, and other cloud-native tooling to support automated product deployment
+- Proposes, researches, and implements automation, functionality, and security improvements to platform and processes
+- Runs team-wide architecture/knowledge transfer meetings for new platform features and development
+- Builds multi-cloud expansion solutions for WK's in-house AI platform to meet shareholder requirements
+- Writes opinionated Terraform modules to support consistent deployment across clouds and product lines
+- Designs and deploys in-depth logging and tracing instrumentation across clusters
+- Mentors junior employees by assigning work, providing instruction, and advising on areas for growth
 
 #work(
   title: "Electrical and Software Engineering Co-Op",
@@ -72,11 +46,10 @@
   company: "Massa Products Corporation",
   dates: dates-helper(start-date: "Jul 2023", end-date: "Jun 2024"),
 )
+- Built and managed AWS-based web services, including IoT services and Lambdas, to support customer configuration and deployment of products
+- Created React-based application with AWS DynamoDB for users to configure and manage deployment of commercial products
 - Designed schematics and circuit boards using OrCAD/Allegro for a variety of commercial products and test fixtures
 - Maintained and improved WinForms-based internal applications used for prototype configuration, R&D, and data analysis
-- Created React-based website with AWS DynamoDB for users to configure and manage deployment of commercial products
-- Built and managed AWS-based tooling, including IoT services and Lambdas, to support customer configuration and deployment of products
-
 
 #work(
   title: "Software Engineer, QA Test Engineer",
@@ -84,38 +57,32 @@
   company: "Tesla Government",
   dates: dates-helper(start-date: "Mar 2020", end-date: "Aug 2021"),
 )
+- Performed and validated production deployments to AWS infrastructure
+- Managed Git-based multi branch pipeline CI/CD system via Jenkins
 - Created new features for microservice-based knowledge management service with TypeScript/React and Java/Spring Boot/MySQL
 - Performed manual functionality and security tests for services, developed complete automated test suite using Selenium
-- Managed Git-based multi branch pipeline CI/CD system via Jenkins
-- Praised by supervisor for rapid skill development and adaptation
+
+== Education
+#edu(
+  institution: "Northeastern University",
+  location: "Boston, MA",
+  dates: dates-helper(start-date: "Sep 2021", end-date: "May 2025"),
+  degree: "Bachelor's of Science, Computer Engineering",
+  consistent: true,
+)
+- GPA: 3.9\/4.0 | Dean's List
 
 == Projects
-
 #project(
   name: "Home Lab",
-  // Role is optional
-  //   role: "Maintainer",
-  // Dates is optional
   dates: dates-helper(start-date: "Dec 2024", end-date: "Present"),
-  // URL is also optional
-  //   url: "hyperschedule.io",
 )
-- Architects and maintains a high-availability multi cluster environment in the home
+- Architects and maintains a high-availability Kubernetes environment in the home
 - Proxmox based multi-node hypervisor cluster for high redundancy and failover capability
-- Separate internal and external Kubernetes clusters created to practice production-class configuration and deployment
-- cdk8s-based Kubernetes infrastructure with custom config management plugin
+- K3s cluster managed using GitOps practices
+- Custom config management tools using TypeScript to provide declarative, high-quality workload configuration in-cluster
+- Industry-standard tools like cert-manager and external-dns used for certificate and DNS management
 
-
-== Extracurricular Activities
-
-#extracurriculars(
-  activity: "Northeastern University Outing Club",
-  dates: dates-helper(start-date: "September 2022", end-date: "Present"),
-)
-- Served as climbing chair, organizing rock climbing outings and events and providing outreach for those new to the support
-- Provides club leadership, helping to plan and run trips as needed
-- "Loj Committee" member - completed \~2 year training process to join committee that operates and maintain's NUHOC's property in northern New Hampshire
-
-== Skills
-- *Programming Languages*: TypeScript/JavaScript, Terraform, Python, Java, Go, shell
-- *Technologies*: React, Git, Linux, Docker, Kubernetes, Terraform/IaC, AWS, Azure, Google Cloud, ArgoCD
+== Interests
+- Outdoor activities - hiking, climbing, biking, skiing
+- Bluegrass music - guitar, mandolin, violin
