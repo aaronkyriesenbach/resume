@@ -29,16 +29,17 @@ Infrastructure engineer with 5+ years of experience in cloud SRE and DevOps; cur
 == Experience
 #work(
   title: "Product Software Engineer, DevOps/Cloud SRE",
-  location: "Waltham, MA",
+  location: "Waltham, MA - distributed team",
   company: "Wolters Kluwer",
   dates: dates-helper(start-date: "Jul 2024", end-date: "Present"),
 )
-- Expands and administrates global Kubernetes platform comprised of \~50 clusters worldwide
+- Expands and administrates global Kubernetes platform comprised of \~50 clusters worldwide - focus on automation to enable self-service deployments without cognitive overhead
 - Creates custom Helm charts reducing workload deployment configuration from hundreds of lines to as few as 10
-- Develops Kubernetes operators to automate cluster bootstrapping, bringing time-to-deployment from days to < 1 hour
+- Develops Kubernetes operators with comprehensive unit and integration test coverage to automate cluster bootstrapping, bringing time-to-deployment from days to < 1 hour
 - Participates in on-call rotation and incident response, providing rapid incident triage and support for developers
 - Builds multi-cloud expansion solutions for WK's in-house AI platform to meet shareholder requirements
 - Writes opinionated Terraform modules (50+) to support consistent deployment across clouds and product lines
+- Designs and implements comprehensive cross-subscription/account RBAC and networking architecture, enabling secure connectivity with least-privilege defaults
 - Maintains MySQL servers, ProxySQL services, and Ansible + AWX instrumentation for DB team
 - Designs and deploys in-depth logging and tracing instrumentation across clusters using OpenTelemetry and DataDog, taking apps from zero observability to logs + traces + metrics with no developer overhead
 - Mentors junior employees by providing technical guidance and advising on areas for growth
@@ -49,9 +50,9 @@ Infrastructure engineer with 5+ years of experience in cloud SRE and DevOps; cur
   company: "Massa Products Corporation",
   dates: dates-helper(start-date: "Jul 2023", end-date: "Jun 2024"),
 )
-- Built and managed AWS-based web services to support customer configuration and deployment of products
 - Implemented MQTT-based messaging using AWS IoT to aggregate customer data and device metrics
 - Created React-based application with AWS DynamoDB for users to configure and manage deployment of commercial products
+- Managed deployment of configuration platform using EC2, Lambda, and Amplify with automated branch-based CI/CD
 
 #work(
   title: "Software Engineer, QA Test Engineer",
@@ -59,7 +60,7 @@ Infrastructure engineer with 5+ years of experience in cloud SRE and DevOps; cur
   company: "Tesla Government",
   dates: dates-helper(start-date: "Mar 2020", end-date: "Aug 2021"),
 )
-- Performed and validated production deployments to AWS infrastructure
+- Performed and validated production deployments to AWS infrastructure (EC2)
 - Managed Git-based multi branch pipeline CI/CD system via Jenkins to automate deployment processes
 - Built features for knowledge management platform (TypeScript/React, Java/Spring Boot) and developed a full automated testing suite using Selenium, reducing pre-release testing from days to hours
 
